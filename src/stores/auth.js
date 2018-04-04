@@ -3,7 +3,7 @@ import { AsyncStorage } from 'react-native';
 
 class AuthStore {
   @observable isLogin = false;
-  token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1OGYwOTYzMGNlMGMyNzAwMTBmODA5YjgiLCJpYXQiOjE0OTQzMTU3NzQsImV4cCI6MTQ5NTE3OTc3NH0.Me-fu2AN0dhvGwwMBeU9Fqbjq6JviDd8o7d09c-ehmA';
+  token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1OGYwOTYzMGNlMGMyNzAwMTBmODA5YjgiLCJwaG9uZSI6IiIsImlhdCI6MTUyMjgxNzU4NSwiZXhwIjoxNTI4MDAxNTg1fQ.TD6RZmmZtiSkNI4kGCwgDQ2LuaLx0OI5PL64RDFz9Mg';
   constructor() {
     this.loadStorage();
   }

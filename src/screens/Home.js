@@ -30,10 +30,6 @@ export default class Home extends Screen {
     headerTitle: <Image source={require('../imgs/logo-color.png')} style={{height: 25, width: 100, resizeMode: 'contain'}} />
   }
 
-  state = {
-    questions: []
-  }
-
   stopLoadData = false;
   @observable questions = []
 
@@ -55,7 +51,8 @@ export default class Home extends Screen {
       }
     });
     var q = await data.json();
-    this.questions = this.questions.concat(q);
+    console.log(q);
+    this.questions = this.questions.concat(q.rows.map(e => e.data.question).filter(e => e.answer && e.content));
     if (q.length < 20) {
       this.stopLoadData = true;
     }
